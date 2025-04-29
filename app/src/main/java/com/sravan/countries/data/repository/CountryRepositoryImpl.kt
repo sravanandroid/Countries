@@ -12,15 +12,11 @@ import kotlinx.coroutines.flow.flowOn
 import kotlinx.coroutines.withContext
 import retrofit2.HttpException
 import java.io.IOException
-import javax.inject.Inject
-import javax.inject.Singleton
 
 /**
  * Implementation of [CountryRepository] that fetches country data from a remote API.
- * Includes caching mechanism and proper error handling.
  */
-@Singleton
-class CountryRepositoryImpl @Inject constructor(
+class CountryRepositoryImpl(
     private val api: CountryApi,
     private val ioDispatcher: CoroutineDispatcher = Dispatchers.IO
 ) : CountryRepository {
@@ -42,4 +38,9 @@ class CountryRepositoryImpl @Inject constructor(
         }
     }.flowOn(ioDispatcher)
 
+    companion object {
+        fun create(api: CountryApi = CountryApi.create()): CountryRepository {
+            return CountryRepositoryImpl(api)
+        }
+    }
 }

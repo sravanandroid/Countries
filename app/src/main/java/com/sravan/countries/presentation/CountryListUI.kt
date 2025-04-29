@@ -1,6 +1,5 @@
 package com.sravan.countries.presentation
 
-import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
@@ -25,6 +24,7 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
+import androidx.compose.runtime.remember
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.stringResource
@@ -35,12 +35,10 @@ import com.sravan.countries.domain.model.Country
 
 /**
  * Composable to display a list of countries.
- *
- * @param viewModel The [CountriesViewModel] responsible for providing the list of countries to display.
  */
 @Composable
 fun CountryListScreen(
-    viewModel: CountriesViewModel = hiltViewModel()
+    viewModel: CountriesViewModel = remember { CountriesViewModel() }
 ) {
     val state by viewModel.state.collectAsState()
 

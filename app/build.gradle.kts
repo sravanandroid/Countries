@@ -2,8 +2,6 @@ plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
     alias(libs.plugins.kotlin.compose)
-    alias(libs.plugins.kotlin.kapt)
-    alias(libs.plugins.hilt.android)
 }
 
 android {
@@ -74,11 +72,6 @@ dependencies {
     implementation(libs.androidx.material3)
     implementation(libs.androidx.viewmodel.compose)
 
-    // Hilt
-    implementation(libs.hilt)
-    kapt(libs.hiltCompiler)
-    implementation(libs.hiltNavCompose)
-
     // Retrofit
     implementation(libs.retrofit)
     implementation(libs.retrofitGson)
@@ -99,8 +92,4 @@ dependencies {
     testImplementation("app.cash.turbine:turbine:0.12.1")
     debugImplementation(libs.androidx.ui.tooling)
     debugImplementation(libs.androidx.ui.test.manifest)
-}
-
-hilt {
-    enableAggregatingTask = true
 }

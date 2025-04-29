@@ -26,10 +26,6 @@ androidx-ui-test-junit4 = { group = "androidx.compose.ui", name = "ui-test-junit
 androidx-material3 = { group = "androidx.compose.material3", name = "material3" }
 androidx-viewmodel-compose = { group = "androidx.lifecycle", name = "lifecycle-viewmodel-compose", version = "2.7.0" }
 
-hilt = { group = "com.google.dagger" , name ="hilt-android", version = "2.56.1"}
-hiltCompiler = { group = "com.google.dagger" , name ="hilt-android-compiler", version = "2.56.1"}
-hiltNavCompose = { group = "androidx.hilt" , name ="hilt-navigation-compose", version = "1.0.0"}
-
 retrofit = { group = "com.squareup.retrofit2" , name ="retrofit", version = "2.9.0"}
 retrofitGson = { group = "com.squareup.retrofit2" , name ="converter-gson", version = "2.9.0"}
 okHttpLogging = { group = "com.squareup.okhttp3" , name ="logging-interceptor", version = "4.11.0"}
@@ -43,5 +39,4 @@ kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
 kotlin-compose = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "kotlin" }
 android-library = { id = "com.android.library", version = "8.0.2" }
 kotlin-kapt = { id = "org.jetbrains.kotlin.kapt", version = "1.8.10"}
-hilt-android = { id = "com.google.dagger.hilt.android", version = "2.56.1"}
 

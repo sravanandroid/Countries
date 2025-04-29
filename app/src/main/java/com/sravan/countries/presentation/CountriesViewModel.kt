@@ -2,8 +2,6 @@ package com.sravan.countries.presentation
 
 import androidx.lifecycle.ViewModel
 import com.sravan.countries.domain.use_case.GetCountriesUseCase
-import dagger.hilt.android.lifecycle.HiltViewModel
-import javax.inject.Inject
 import androidx.compose.runtime.State
 import androidx.compose.runtime.mutableStateOf
 import androidx.lifecycle.viewModelScope
@@ -21,9 +19,8 @@ import kotlinx.coroutines.flow.onStart
  * Fetches countries using GetCountriesUseCase and updates the UI state
  * based on the result (success, error, or loading).
  */
-@HiltViewModel
-class CountriesViewModel @Inject constructor(
-    private val getCountriesUseCase: GetCountriesUseCase
+class CountriesViewModel(
+    private val getCountriesUseCase: GetCountriesUseCase = GetCountriesUseCase.create()
 ) : ViewModel() {
 
     private val _state = MutableStateFlow(CountriesState())
