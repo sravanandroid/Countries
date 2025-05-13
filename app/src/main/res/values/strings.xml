@@ -1,8 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">Countries</string>
-    <string name="country_name_region">%1s, %2s</string>
+    <string name="country_name_region">%1$s, %2$s</string>
     <string name="retry">Retry</string>
     <string name="refresh">Refresh</string>
     <string name="no_countries_available">No countries available</string>
     <string name="error_loading_countries">Error loading countries</string>
+    <string name="network_error">No internet connection</string>
+    <string name="showing_cached_data">Showing cached data</string>
 </resources>

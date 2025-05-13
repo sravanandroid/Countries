@@ -14,4 +14,14 @@
 .cxx
 local.properties
 
-.qodo
+
+/.idea/gradle.xml
+/.idea/deploymentTargetSelector.xml
+/.idea/AndroidProjectSystem.xml
+/.idea/compiler.xml
+/.idea/kotlinc.xml
+/.idea/migrations.xml
+/.idea/misc.xml
+/.idea/inspectionProfiles/Project_Default.xml
+/.idea/runConfigurations.xml
+/.idea/vcs.xml
